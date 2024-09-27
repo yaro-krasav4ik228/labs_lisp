@@ -81,6 +81,7 @@ CL-USER> (append l (last (car (last l))))
 <p align="center">
 <img src="lab-1-variant.png">
 </p>
+
 ```
 CL-USER> (setq deflst (list 'd 'e 'f))
 (D E F)
