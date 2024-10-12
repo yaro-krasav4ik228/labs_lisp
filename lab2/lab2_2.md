@@ -38,7 +38,7 @@ CL-USER> (compress-list '(1 a a 3 3 3 b))
 ((1 1) (2 A) (3 3) (1 B))
 ```
 
-## Лістинг функції <reverse-and-nest-tail>
+## Лістинг функції reverse-and-nest-tail
 
 ```
 CL-USER> (defun reverse-and-nest-tail (lst &optional (temp nil))
@@ -79,7 +79,7 @@ passed... test 5
 NIL
 ```
 
-## Лістинг функції <compress-list>
+## Лістинг функції compress-list
 
 ```
  CL-USER> (defun compress-list (lst &optional (result '()) (count 1))
