@@ -6,6 +6,7 @@
 </p>
 <p align="right"><b>Студент</b>: Угнівенко Ярослав Вікторович КВ-11</p>
 <p align="right"><b>Рік</b>: 2024</p>
+
 ## Загальне завдання
 Реалізуйте алгоритм сортування чисел у списку двома способами: функціонально і
 імперативно.
@@ -23,8 +24,10 @@
 деструктивних змін варто застосувати функцію copy-list (в разі необхідності).
 Також реалізована функція не має бути функціоналом (тобто приймати на вхід
 функції в якості аргументів).
+
 ## Варіант <23 (7)>
 Алгоритм сортування Шелла за незменшенням.
+
 ## Лістинг функції з використанням конструктивного підходу
 ```lisp
 (defun shell-sort-functional (lst)
@@ -67,6 +70,7 @@
       (let ((next-gap (floor (/ n 2)))) 
         (cons next-gap (generate-gaps next-gap)))))
 ```
+
 ### Тестові набори та утиліти
 ```lisp
 (defun check-shell-sort-functional (name input expected)
@@ -84,6 +88,7 @@ comparison status"
   (check-shell-sort-functional "test 5" '(4 3 2 1) '(1 2 3 4))
   (check-shell-sort-functional "test 6" '(5 5 5 5) '(5 5 5 5)))
 ```
+
 ### Тестування
 ```lisp
 (test-shell-sort-functional)
@@ -95,6 +100,7 @@ passed... test 5
 passed... test 6
 NIL
 ```
+
 ## Лістинг функції з використанням деструктивного підходу
 ```lisp
 (defun generate-gaps (n)
@@ -122,6 +128,7 @@ NIL
                  (setf (nth j sorted) temp))))
     sorted))
 ```
+
 ### Тестові набори та утиліти
 ```lisp
 (defun check-shell-sort-imperative (name input expected)
@@ -139,6 +146,7 @@ comparison status"
   (check-shell-sort-imperative "test 5" '(4 3 2 1) '(1 2 3 4))
   (check-shell-sort-imperative "test 6" '(5 5 5 5) '(5 5 5 5)))
 ```
+
 ### Тестування
 ```lisp
 (test-shell-sort-imperative)
