@@ -1,0 +1,10 @@
+(defun merge-spinning-tuples-fn (&key (shift-step 1))
+  (let ((current-shift 0))
+    (lambda (&rest lists)
+      (let* ((length (length lists))
+             (shift (mod current-shift length)))
+        (setq current-shift (+ current-shift shift-step))
+        (if (zerop shift)
+            lists
+            (append (nthcdr shift lists)
+                    (subseq lists 0 shift)))))))
